@@ -1,0 +1,5 @@
+*.pyc
+*_backup.py
+*.p
+*.eps
+/log_tb
