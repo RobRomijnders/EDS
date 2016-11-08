@@ -3,3 +3,6 @@
 *.p
 *.eps
 /log_tb
+*-checkpoint.ipynb
+*.pkl.gz
+*.data
