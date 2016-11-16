@@ -11,3 +11,11 @@ Next MeetUp is 17 Nov 2016 on Unsupervised learning
   * __tSNE__ [1 hour lecture on tSNE by Laurens van der Maaten](https://www.youtube.com/watch?v=RJVL80Gg3lA)
   * __demo__ [Demo for using tSNE](http://distill.pub/2016/misread-tsne/)
 
+##Challenge
+Open __wine_dataset.npy__ with 
+
+```python
+import numpy as np
+X = np.load('wine_dataset.npy')
+```
+
