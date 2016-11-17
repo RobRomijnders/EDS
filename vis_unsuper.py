@@ -104,7 +104,7 @@ ax2[1,1].set_title('tSNE on WDBC')
 
 
 ##Swiss Roll
-tSNE_model_SR = TSNE(verbose=2, early_exaggeration=6, n_iter = 3000,min_grad_norm=1e-12, n_iter_without_progress=100, perplexity=300, angle=0.2)
+tSNE_model_SR = TSNE(verbose=2, early_exaggeration=5, n_iter = 3000,min_grad_norm=1e-12, n_iter_without_progress=100, perplexity=170)
 SR_tSNE = tSNE_model_SR.fit_transform(SR_data)
 
 ax3[1,0].scatter(SR_tSNE[:,0],SR_tSNE[:,1],c=SR_labels,s=50,marker='*',linewidths = 0)
