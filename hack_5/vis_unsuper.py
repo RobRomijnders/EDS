@@ -52,7 +52,7 @@ MNIST_reduced = PCA_model.transform(MNIST_valid[0])
 ax1[0,0].scatter(MNIST_reduced[:,0],MNIST_reduced[:,1],c=MNIST_valid[1],marker='*',linewidths = 0)
 ax1[0,1].scatter(MNIST_reduced[:,0],MNIST_reduced[:,1],c='k',marker='*',linewidths = 0)
 ax1[0,0].set_title('PCA on MNIST')
-ax1[0,1].set_title('PCA on MNIST')
+pypax1[0,1].set_title('PCA on MNIST')
 
 
 ##WDBC
