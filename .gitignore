@@ -6,3 +6,5 @@
 *-checkpoint.ipynb
 *.pkl.gz
 *.data
+*.iml
+*.idea
