@@ -1,4 +1,4 @@
-from hack_8.util.dataloader import read_data_sets
+from util.dataloader import read_data_sets
 import tensorflow as tf
 
 
