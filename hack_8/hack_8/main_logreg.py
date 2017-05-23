@@ -23,6 +23,8 @@ loss_node = tf.nn.sparse_softmax_cross_entropy_with_logits(labels=y_ph, logits=l
 loss_batch = tf.reduce_mean(loss_node)
 
 #Assignment 1: calculate the accuracy here
+pred = tf.argmax(logits,1)
+acc_node = tf.reduce_mean(tf.cast(tf.equal(y_ph,pred),tf.float32))
 
 #Make an SGD step
 step = tf.train.AdamOptimizer(0.0005).minimize(loss_batch)
@@ -33,9 +35,9 @@ sess.run(tf.global_variables_initializer())
 
 for k in range(5000):
     X_batch, y_batch = MNIST.next_flat_batch()
-    loss, _ = sess.run([loss_batch, step],{X_ph:X_batch,y_ph:y_batch})
+    loss, _, acc = sess.run([loss_batch, step, acc_node],{X_ph:X_batch,y_ph:y_batch})
     #Assignment2: print the loss on the validation set (once every 100 steps)
-    if k%100 == 0: print(loss)
+    if k%100 == 0: print(loss, acc)
 
 
 
