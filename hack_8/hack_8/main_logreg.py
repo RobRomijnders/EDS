@@ -12,11 +12,16 @@ y_ph = tf.placeholder(tf.int64, [None,],name="y_placeholder")
 
 #Define the network
 #Assignment 3: extend the computation to a neural network
-W = tf.get_variable('weight', [784, 10])
-b = tf.get_variable('bias',[10,])
+W = tf.get_variable('weight', [784, 100])
+b = tf.get_variable('bias',[100,])
+W2 = tf.get_variable('weight1',[100,10])
+b2 = tf.get_variable('bias1',[10,])
 
-a = tf.nn.xw_plus_b(X_ph, W, b)
-logits = tf.nn.softmax(a)
+
+a1 = tf.nn.xw_plus_b(X_ph, W, b)
+h1 = tf.nn.tanh(a1)
+a2 = tf.nn.xw_plus_b(h1,W2,b2)
+logits = tf.nn.softmax(a2)
 
 #Calculate the loss
 loss_node = tf.nn.sparse_softmax_cross_entropy_with_logits(labels=y_ph, logits=logits)
