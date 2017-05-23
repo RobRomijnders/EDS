@@ -37,7 +37,10 @@ for k in range(5000):
     X_batch, y_batch = MNIST.next_flat_batch()
     loss, _, acc = sess.run([loss_batch, step, acc_node],{X_ph:X_batch,y_ph:y_batch})
     #Assignment2: print the loss on the validation set (once every 100 steps)
-    if k%100 == 0: print(loss, acc)
+    if k%100 == 0:
+        X_val, y_val = MNIST.next_flat_batch(dataset='val')
+        acc_val = sess.run(acc_node, feed_dict={X_ph:X_val, y_ph:y_val})
+        print('At step %5i, loss %5.3f and accuracy TRAIN %5.3f VAL %5.3f'%(k,loss,acc, acc_val))
 
 
 
