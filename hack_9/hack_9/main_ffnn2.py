@@ -17,19 +17,25 @@ y_ph = tf.placeholder(tf.int64, [None,],name="y_placeholder")
 
 # Assignment 1: Replace the first "tf.nn.xw_plus_b()" functions with a convolution
 # Tip: at some point you must delete the next line
-X = tf.reshape(X_ph,[-1,784])
+# X = tf.reshape(X_ph,[-1,784])
 
 #Define the network
-W1 = tf.get_variable('weight1', [784, 100])
-b1 = tf.get_variable('bias1',[100,])
-W2 = tf.get_variable('weight2',[100,10])
+W1 = tf.get_variable('weight1', [5, 5, 1, 12])
+b1 = tf.get_variable('bias1',[12,])
+L = (28-5+2*0)+1 #(WIDTH - KERNEL_SIZE + 2*PADDING)/STRIDE + 1
+LL = L**2*12 # WIDTH^2*NUM_NEURONS
+W2 = tf.get_variable('weight2',[LL,10])
 b2 = tf.get_variable('bias2',[10,])
 
 
-a1 = tf.nn.xw_plus_b(X, W1, b1)
+a1 = tf.nn.conv2d(X_ph, W1,[1,1,1,1],"VALID")+ b1
 h1 = tf.nn.tanh(a1)
-a2 = tf.nn.xw_plus_b(h1,W2,b2)
+h1_flat = tf.reshape(h1,[-1,LL])
+a2 = tf.nn.xw_plus_b(h1_flat,W2,b2)
 logits = tf.nn.softmax(a2)
+
+# Tensorboard summary of the kernels. Represent them as images
+tf.summary.image("kernels",tf.transpose(W1,[3,0,1,2]),max_outputs=12)
 
 #Calculate the loss
 loss_node = tf.nn.sparse_softmax_cross_entropy_with_logits(labels=y_ph, logits=logits)
