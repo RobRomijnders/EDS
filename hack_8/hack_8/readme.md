@@ -35,3 +35,20 @@ After reading on these topics, you should be able to answer:
   
   
 If you have any comments or questions on the preparation, please file an issue on github or email us at [romijndersrob@gmail.com](mailto:romijndersrob@gmail.com)
+
+# Meetup
+
+Questionnaire: [Fill in the questionnaire here](https://docs.google.com/forms/d/e/1FAIpQLSfG3qudK691ZxcaKncwiNkj2Ncn8PnXl0-2aug-Bz78DgnIIg/viewform?usp=sf_link)
+
+Useful links
+
+  * [Visualizing a multi layer perceptron](http://cs.stanford.edu/people/karpathy/convnetjs/demo/classify2d.html)
+  * [Getting started with Tensorflow](https://www.tensorflow.org/get_started/)
+  * [Tensorflow Playground](http://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.61950&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false)
+
+
+Reading for the next meetup
+
+  * [The unreasonable effectiveness of RNNs](http://karpathy.github.io/2015/05/21/rnn-effectiveness/)
+  * [CS231n: convolutional neural networks](https://www.youtube.com/watch?v=NfnWJUyUJYU&list=PLkt2uSq6rBVctENoVBg1TpCC7OQi31AlC)
+  * [Udacity course on Deep Learning](https://www.udacity.com/course/deep-learning--ud730)
