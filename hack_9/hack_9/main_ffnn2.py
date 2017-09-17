@@ -1,3 +1,6 @@
+# import sys
+# sys.path.append('C:\\Users\\LuX\\Documents\\meetup_eindhoven\\meetup_nn_tensorflow')
+
 from util.dataloader import read_data_sets
 from util.util_func import minimize
 import tensorflow as tf
@@ -44,28 +47,25 @@ loss_batch = tf.reduce_mean(loss_node)
 #Calculate the accuracy
 pred = tf.argmax(logits,1)
 acc_node = tf.reduce_mean(tf.cast(tf.equal(y_ph,pred),tf.float32))
+tf.summary.scalar("accuracy", acc_node)
 
 #Make an SGD step
 step = minimize(loss_batch, learningrate=0.0005)
 
 #Make node for Tensorboard
 tensorboard = tf.summary.merge_all()
-writer = tf.summary.FileWriter('/tmp/tensorboard/'+strftime("%Y-%m-%d_%H-%M-%S", gmtime()),sess.graph)
+writer = tf.summary.FileWriter('tensorboard/'+strftime("%Y-%m-%d_%H-%M-%S", gmtime()),sess.graph)
 
 #Initialize the variables
 sess.run(tf.global_variables_initializer())
 
-for k in range(5000):
+
+for k in range(2000):
     X_batch, y_batch = MNIST.next_batch()
     loss, _, acc = sess.run([loss_batch, step, acc_node],{X_ph:X_batch,y_ph:y_batch})
     if k%100 == 0:
         X_val, y_val = MNIST.next_batch(dataset='val')
         acc_val, log_string = sess.run([acc_node, tensorboard], feed_dict={X_ph:X_val, y_ph:y_val})
         writer.add_summary(log_string, k)
+        writer.flush()
         print('At step %5i, loss %5.3f and accuracy TRAIN %5.3f VAL %5.3f'%(k,loss,acc, acc_val))
-
-
-
-
-
-
