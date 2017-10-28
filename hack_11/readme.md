@@ -24,6 +24,6 @@ I'll upload a notebook with skeleton code on the day of the hackathon.
 # 2. Questionnaire:
 Make sure you fill in our [Questionnaire](https://docs.google.com/forms/d/e/1FAIpQLSfG3qudK691ZxcaKncwiNkj2Ncn8PnXl0-2aug-Bz78DgnIIg/viewform)
 
-## 3. Next Meetup:
+# 3. Next Meetup:
 Our next meetup will be [November 21](https://www.meetup.com/Eindhoven-Data-Science-Meetup/events/243358802/) and will be about feature engineering with Stoichastic Signal Analysis techniques. Make sure you have your spot reserved.
 
