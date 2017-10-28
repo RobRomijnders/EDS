@@ -8,3 +8,11 @@
 *.data
 *.iml
 *.idea
+
+
+hack_5
+hack_9
+hack_10/recommendation-systems
+hack_10/data
+hack_10/main_lens.py
+hack_10/Code/split_data.py
