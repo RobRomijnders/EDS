@@ -8,7 +8,12 @@ If you cant find the location, you can call me on 0622352408
 # 1. Preparations for this meetup:
 
 ## 1.1 SciPy:
-We will be working with Scipy, so make  sure you have it already installed. 
+We will be working with SciPy, so make  sure you have it already installed. 
+After you have installed scipy make sure it works properly by importing a few functions:
+```
+from scipy.signal import welch
+from scipy.fftpack import fft
+```
 
 ## 1.2 The Data:
 We are going to work with the famous [
