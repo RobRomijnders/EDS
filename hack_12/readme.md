@@ -24,9 +24,11 @@ Please make sure you have already downloaded it before you come to the meetup.
 I'll upload a notebook with skeleton code on the day of the hackathon.
 
 ## 1.4 Reading Material
-[Have We Forgotten about Geometry in Computer Vision?](https://alexgkendall.com/computer_vision/have_we_forgotten_about_geometry_in_computer_vision/)
-[Deep, Deep Trouble: Deep Learning’s Impact on Image Processing, Mathematics, and Humanity](https://sinews.siam.org/Details-Page/deep-deep-trouble)
-[Release notes Scipy 1.0](https://scipy.github.io/devdocs/release.1.0.0.html)
++ [Have We Forgotten about Geometry in Computer Vision?](https://alexgkendall.com/computer_vision/have_we_forgotten_about_geometry_in_computer_vision/)
+
++ [Deep, Deep Trouble: Deep Learning’s Impact on Image Processing, Mathematics, and Humanity](https://sinews.siam.org/Details-Page/deep-deep-trouble)
+
++ [Release notes Scipy 1.0](https://scipy.github.io/devdocs/release.1.0.0.html)
 
 # 2. Questionnaire:
 Make sure you fill in our [Questionnaire](https://docs.google.com/forms/d/e/1FAIpQLSfG3qudK691ZxcaKncwiNkj2Ncn8PnXl0-2aug-Bz78DgnIIg/viewform)
